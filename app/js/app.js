@@ -5,16 +5,16 @@ import '/app/libs/jquery.maskedinput/dist/jquery.maskedinput.min.js'
 // Обновить страницу при смене ширины экрана
 var windowWidth = window.innerWidth;
 window.onresize = function () {
-    var newWindowWidth = window.innerWidth;
-    if (newWindowWidth != windowWidth) {
-        windowWidth = newWindowWidth;
-        location.reload();
-    }
+	var newWindowWidth = window.innerWidth;
+	if (newWindowWidth != windowWidth) {
+		windowWidth = newWindowWidth;
+		location.reload();
+	}
 };
 
 document.addEventListener('DOMContentLoaded', () => {
 
-	$( ".button__pop-up" ).click(function(){ 
+	$(".button__pop-up").click(function () {
 		$('.form_modul #pop-up_name').val($(this).attr('data-name'));
 	});
 
@@ -31,26 +31,25 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 	function checkWidth() {
-    var windowWidth = $('body').innerWidth(),
-        elem = $(".middle__screen"); 
-    if(windowWidth <= 1349){
-      elem.addClass('hide-content');
-    }
-    else{
-      elem.removeClass('hide-content');
-    }
-  }
+		var windowWidth = $('body').innerWidth(),
+			elem = $(".middle__screen");
+		if (windowWidth <= 1349) {
+			elem.addClass('hide-content');
+		} else {
+			elem.removeClass('hide-content');
+		}
+	}
 
-  checkWidth(); // проверит при загрузке страницы
+	checkWidth(); // проверит при загрузке страницы
 
-	$(".portfolio__container").each(function() {
-    let more = $(this).find(".portfolio__more");
-    let hide = $(this).find(".hide-content");
-    hide.hide();
-    more.click(function() {
-        hide.slideToggle();
-        more.text(more.text() == "Скрыть" ? "Смотреть еще" : "Скрыть");
-    });
+	$(".portfolio__container").each(function () {
+		let more = $(this).find(".portfolio__more");
+		let hide = $(this).find(".hide-content");
+		hide.hide();
+		more.click(function () {
+			hide.slideToggle();
+			more.text(more.text() == "Скрыть" ? "Смотреть еще" : "Скрыть");
+		});
 	});
 
 	var saleSwiper = new Swiper('#sale-slider', {
@@ -87,40 +86,34 @@ document.addEventListener('DOMContentLoaded', () => {
 			320: {
 				spaceBetween: 8,
 			},
-			577:{
+			577: {
 				spaceBetween: 1,
 			}
 		}
 	})
-	
-	//Закрепленное меню
 
+	//Закрепленное меню
 	var $menu = $(".main-header__bottom");
 
 	$(window).scroll(function () {
-
 		if ($(this).scrollTop() > 100 && $menu.hasClass("default")) {
-
 			$menu.removeClass("default").addClass("fixed");
-
 		} else if ($(this).scrollTop() <= 100 && $menu.hasClass("fixed")) {
-
 			$menu.removeClass("fixed").addClass("default");
 		}
 	});
 
-	$('.button__pop-up').click(function() { // Вызываем функцию по нажатию на кнопку
-    var popup_id = $('#' + $(this).attr("rel")); // Связываем rel и popup_id
-		$('.main-header__mobile-menu').removeClass('active');	
-		$('body').removeClass('shading');	
+	$('.button__pop-up').click(function () { // Вызываем функцию по нажатию на кнопку
+		var popup_id = $('#' + $(this).attr("rel")); // Связываем rel и popup_id
+		$('.main-header__mobile-menu').removeClass('active');
+		$('body').removeClass('shading');
 		$('.main-header__mobile-burger').removeClass('cross');
 		$('.main-header').removeClass('fixed');
-    $(popup_id).show(); // Открываем окно
-    $('.overlay_popup').show(); // Открываем блок заднего фона
-		
+		$(popup_id).show(); // Открываем окно
+		$('.overlay_popup').show(); // Открываем блок заднего фона
 	})
-	$('.pop_up_close').click(function() { // Обрабатываем клик по заднему фону
-    $('.overlay_popup, .pop_up').hide(); // Скрываем затемнённый задний фон и основное всплывающее окно
+	$('.pop_up_close').click(function () { // Обрабатываем клик по заднему фону
+		$('.overlay_popup, .pop_up').hide(); // Скрываем затемнённый задний фон и основное всплывающее окно
 	})
 
 	jQuery(window).scroll(function () {
@@ -133,22 +126,14 @@ document.addEventListener('DOMContentLoaded', () => {
 			if (scroll > top && scroll < bottom) {
 				$('a.active').removeClass('active');
 				$('a[href="#' + id + '"]').addClass('active');
-
 			}
 		})
 	});
 
 	$(".main-header__menu").on("click", "a", function (event) {
-		// исключаем стандартную реакцию браузера
 		event.preventDefault();
-
-		// получем идентификатор блока из атрибута href
 		var id = $(this).attr('href'),
-
-			// находим высоту, на которой расположен блок
 			top = $(id).offset().top;
-
-		// анимируем переход к блоку, время: 100 мс
 		$('body,html').animate({
 			scrollTop: top
 		}, 100);
@@ -164,9 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		scrollbar: {
 			el: '.service-scrollbar',
 			draggable: true,
-
 		}
-
 	});
 
 	$(window).scroll(function () {
@@ -190,17 +173,11 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 	$('.main-header__link').click(function () {
-		$('.main-header__mobile-menu').toggleClass('active');	
-		$('body').toggleClass('shading');	
+		$('.main-header__mobile-menu').toggleClass('active');
+		$('body').toggleClass('shading');
 		$('.main-header__mobile-burger').toggleClass('cross');
 		$('.main-header').toggleClass('fixed');
 	});
-
-
-	
-
-
-
 
 	$('.main-header__mobile-burger').click(function () {
 		$('.main-header').toggleClass('fixed');
@@ -214,19 +191,18 @@ document.addEventListener('DOMContentLoaded', () => {
 		e.preventDefault();
 		var form = $(this);
 		$.ajax({
-							url: '/form_plagin.php',
-							type: 'POST',
-							data: form.serialize(),
-							dataType: 'html',
-							success: function(data) {
-								console.log('success');
-								$(".pop_up_close").trigger("click");
-								$(".accepted__hidden").trigger("click");
-									
-							}
-					});
+			url: '/form_plagin.php',
+			type: 'POST',
+			data: form.serialize(),
+			dataType: 'html',
+			success: function (data) {
+				console.log('success');
+				$(".pop_up_close").trigger("click");
+				$(".accepted__hidden").trigger("click");
+			}
+		});
 	});
-	
+
 	$('html').on('submit', '.form_modul2', function (e) {
 		e.preventDefault();
 		var form = $(this);
@@ -235,7 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			type: 'POST',
 			data: form.serialize(),
 			dataType: 'html',
-			success: function(data) {
+			success: function (data) {
 				console.log('success');
 				$(".pop_up_close").trigger("click");
 				$(".accepted__hidden").trigger("click");

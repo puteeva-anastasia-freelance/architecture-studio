@@ -1,16 +1,16 @@
 {
-	"name": "PROJCOM",
+	"name": "architecture-studio",
 	"version": "5.0.0",
 	"description": "",
 	"main": "index.js",
-	"author": "ITOBLAKA",
+	"author": "Anastasia",
 	"type": "module",
 	"browserslist": [
 		"last 10 versions"
 	],
 	"license": "ISC",
 	"scripts": {
-		"start": "gulp"
+		"deploy": "gh-pages -d dist"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.17.8",
@@ -43,6 +43,15 @@
 		"webpack-stream": "^7.0.0"
 	},
 	"dependencies": {
+		"gh-pages": "^4.0.0",
 		"jquery": "^3.6.0"
-	}
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/puteeva-anastasia-freelance/architecture-studio.git"
+	},
+	"bugs": {
+		"url": "https://github.com/puteeva-anastasia-freelance/architecture-studio/issues"
+	},
+	"homepage": "https://puteeva-anastasia-freelance.github.io/architecture-studio/"
 }

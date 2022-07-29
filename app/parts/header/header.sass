@@ -11,12 +11,12 @@
 
 	@media (max-width: 1212px)
 		padding-top: 8px
-	
+
 	@media (max-width: 992px)
 		background-color: #333
 		padding-bottom: 10px
 		padding-top: 10px
-	
+
 	@media (max-width: 400px)
 		padding-top: 9px
 		padding-bottom: 13px
@@ -49,15 +49,15 @@
 				height: 32px
 				width: 74px
 				margin-right: 3px
-		
+
 		&-txt
 			margin-top: 3px
 			margin-left: 6px
-		
+
 			@media (max-width: 992px)
 				margin-top: 6px
 				margin-left: 7px
-		
+
 		&-svg
 			@media (max-width: 400px)
 				width: 45px
@@ -74,7 +74,7 @@
 
 		@media (max-width: 992px)
 			width: auto
-	
+
 	&__location
 		display: flex
 		margin-top: 4px
@@ -82,7 +82,7 @@
 		@media (max-width: 1212px)
 			align-items: center
 			margin-top: -2px
-		
+
 		@media (max-width: 992px)
 			display: none
 
@@ -96,7 +96,7 @@
 				line-height: 16px
 				margin-left: 13px
 				margin-top: 2px
-	
+
 	&__phone
 		display: flex
 		align-items: center
@@ -104,7 +104,7 @@
 		@media (max-width: 992px)
 			margin-right: 68px
 			margin-top: -5px
-		
+
 		@media (max-width: 675px)
 			display: none
 
@@ -122,7 +122,7 @@
 
 			&:hover
 				color: $accent
-	
+
 	&__menu
 		display: flex
 		justify-content: space-between
@@ -132,7 +132,7 @@
 		margin-top: 17px
 
 		@media (max-width: 992px)
-			display: none	
+			display: none
 
 		&.fixed
 			position: fixed
@@ -165,7 +165,7 @@
 
 				@media (max-width: 992px)
 					padding: 0
-			
+
 			.main-header__link
 				padding: 8px 16px
 
@@ -174,7 +174,7 @@
 
 				@media (max-width: 992px)
 					padding: 0
-			
+
 			.main-header__item
 				margin-right: 27.5px
 
@@ -191,7 +191,7 @@
 		padding: 0
 		list-style-type: none
 		display: flex
-	
+
 	&__item
 		margin-right: 59.5px
 
@@ -200,18 +200,21 @@
 
 	&__link
 		font-weight: 600
-		font-size: 15px		
+		font-size: 15px
 		text-decoration: none
 		color: #fff
 		transition: color .2s ease-in-out
-		
+
+		&-button
+			margin: 0 0 0 20px
+
 		&.active
 			outline: 1px solid #955DF7
 			border-radius: 4px
 
 		&:hover
 			color: $accent
-			text-decoration: underline	
+			text-decoration: underline
 
 		@media (max-width: 1212px)
 			font-size: 14px
@@ -219,7 +222,7 @@
 	&__order-call
 		margin-right: 1px
 		margin-top: 5px
-	
+
 	&__mobile-burger
 		display: none
 
@@ -241,17 +244,17 @@
 			display: block
 			margin-right: -2px
 			margin-top: 4px
-		
+
 		@media (max-width: 400px)
 			margin-right: -6px
 			margin-top: 5px
-			
+
 		&-icon
 			@media (max-width: 400px)
 				width: 23px
 				height: 16px
 
-	&__mobile-menu 
+	&__mobile-menu
 		display: none
 
 		@media (max-width: 992px)
@@ -276,7 +279,7 @@
 				flex-direction: column
 				margin: 0
 				margin-left: 20px
-			
+
 			.main-header__item
 				margin-bottom: 20px
 
@@ -288,8 +291,7 @@
 				padding: 0
 				white-space: nowrap
 
-		
-			&.active		
+			&.active
 				width: 78.1%
 				max-width: 400px
 				padding-top: 20px
@@ -300,5 +302,3 @@
 
 				.main-header__link.active
 					outline: none
-
-		
