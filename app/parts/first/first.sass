@@ -1,0 +1,212 @@
+.first
+	padding-top: 140px
+	padding-bottom: 377px
+	position: relative
+
+	@media (max-width: 1212px)
+		padding-top: 127px
+		padding-bottom: 206px
+	
+	@media (max-width: 992px)
+		padding-top: 114px
+		padding-bottom: 135px
+
+	@media (max-width: 400px)	
+		padding-top: 59px
+		padding-bottom: 71px
+
+	&__container
+		position: relative
+
+	&__subtitle
+		color: $accent
+		font-weight: 400
+		font-size: 38px
+		margin-top: 22px
+		display: block
+
+		@media (max-width: 1212px)
+			font-size: 30px
+			margin-top: 21px
+		
+		@media (max-width: 400px)	
+			font-size: 18px
+			margin-top: 19px
+	
+	&__txt
+		font-size: 24px
+		line-height: 29px
+		color: #FFFFFF
+		max-width: 909px
+		margin-top: 7px
+
+		@media (max-width: 1212px)
+			font-size: 18px
+			line-height: 22px
+			margin-top: 5px
+			max-width: 735px
+		
+		@media (max-width: 400px)	
+			font-size: 12px
+			line-height: 14px
+	
+	&__button
+		padding: 18px 30px 17px 35px
+		margin-top: 67px
+		display: flex
+		align-items: center
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+		transition: box-shadow .2s ease-in-out
+
+		&:hover
+			box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.25)
+		
+		&:active
+			background: #D764FF
+			box-shadow: none
+
+		@media (max-width: 1212px)
+			margin-top: 42px
+			padding: 14px 22px 13px 26px
+
+		@media (max-width: 400px)
+			margin-top: 50px
+			padding: 11px 11px 10px 16px
+
+		&-svg
+			margin-right: 13px
+			margin-top: -1px
+
+			@media (max-width: 1212px)
+				width: 21.7px
+				height: 30px
+				margin-right: 12px
+			
+			@media (max-width: 400px)
+				width: 18.1px
+				height: 25px
+				margin-top: -4px
+	
+	&__buttons
+		position: absolute
+		bottom: 39px
+		right: 40px
+		background: linear-gradient(136.94deg, #2853EC 24.15%, #D764FF 75.85%)
+		border-radius: 4px
+		width: 74px
+		height: 212px
+
+		@media (max-width: 992px)
+			right: 16px
+			bottom: -7px
+			width: 64px
+			height: 179px
+
+		@media (max-width: 770px)	
+			display: none
+
+		&::before, &::after
+			position: absolute
+			content: ''
+			display: block
+			width: 40px
+			height: 1px
+			left: 18px
+			background-color: rgba(255, 255, 255, 0.6)
+			z-index: 10
+
+			@media (max-width: 992px)
+				left: 12px
+		
+		&::before
+			top: 71px
+
+			@media (max-width: 992px)
+				top: 60px
+		
+		&::after
+			top: 142px
+
+			@media (max-width: 992px)
+				top: 115px
+	
+	&__widget
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 74px
+		height: 71px
+		position: absolute
+
+		@media (max-width: 992px)
+			width: 64px
+			height: 60px
+
+			&-calc
+				width: 21.7px
+				height: 30px
+			
+			&-phone
+				height: 27px
+				width: 27px
+			
+			&-procent
+				width: 30px
+				height: 30px
+		
+
+		&:nth-child(1)
+			top: 0
+
+			&:hover
+				border-radius: 4px 4px 0px 4px
+				padding-left: 15px
+				padding-right: 22px	
+			
+				&::after
+					content: 'Рассчитать стоимость'
+
+		&:nth-child(2)
+			top: 71px
+
+			@media (max-width: 992px)
+				top: 58px
+
+			&:hover
+				border-radius: 4px 0px 0px 4px
+				padding-left: 27px
+				padding-right: 19px	
+				
+
+				&::after
+					content: 'Перезвоните мне'
+		
+		&:nth-child(3)
+			top: 142px
+
+			@media (max-width: 992px)
+				top: 117px
+
+			&:hover
+				border-radius: 4px 0px 4px 4px
+				padding-left: 35px
+				padding-right: 17px	
+
+				&::after
+					content: 'Скидки и акции'
+
+		&:hover
+			width: 236px
+			background: linear-gradient(93.58deg, #2853EC 0%, #D764FF 100%)
+			right: 0
+			font-weight: 700
+			font-size: 15px
+			color: #FFFFFF
+			text-decoration: none
+			flex-direction: row-reverse
+			justify-content: space-between
+			box-sizing: border-box
+				
+
+			
+

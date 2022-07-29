@@ -1,0 +1,187 @@
+.step
+	padding-top: 68px
+	padding-bottom: 0
+
+	@media (max-width: 576px)
+		padding-top: 51px
+
+	&__title
+		margin-bottom: 29px
+
+		@media (max-width: 992px)
+			margin-bottom: 14px
+		
+		@media (max-width: 576px)
+			margin-bottom: 20px
+
+	&__wrap
+		display: flex
+		justify-content: space-between
+		flex-direction: column
+		width: 100%
+		margin: 0 auto
+		margin-top: 40px
+		position: relative
+		padding-top: 79px
+		padding-bottom: 8px
+
+		@media (max-width: 992px)
+			margin-top: 36px
+			padding-top: 32px
+			padding-bottom: 3px
+		
+		@media (max-width: 576px)
+			margin-top: 27px
+			padding-top: 0
+			padding-bottom: 9px
+			
+
+		&::before
+			content: ''
+			display: block
+			border-left: 3px dashed $blue
+			width: 5px
+			height: 100%
+			top: 0
+			position: absolute
+			left: 4px
+			right: 0
+			margin: 0 auto
+
+			@media (max-width: 992px)
+				left: 8px
+			
+			@media (max-width: 576px)
+				right: auto
+				left: 23px
+				
+	&__item
+		border: 0
+		border-radius: 4px
+		width: 100%
+		box-sizing: border-box
+		padding: 0
+		position: relative
+		height: auto
+		display: flex
+		justify-content: space-between
+		margin-bottom: 62px
+
+		@media (max-width: 992px)
+			margin-bottom: 64px
+		
+		@media (max-width: 576px)
+			flex-direction: column
+			padding-left: 47px
+			margin-top: -6px
+			margin-bottom: 18px
+			padding-top: 15px
+		
+			&-top
+				flex-direction: column-reverse
+
+		&::after
+			content: ''
+			width: 22px
+			height: 22px
+			border: 2px solid rgb(95%, 82%, 100%)
+			background-color: $blue
+			position: absolute
+			display: block
+			top: 39%
+			border-radius: 50%
+			left: 0
+			right: 2px
+			margin: 0 auto
+
+			@media (max-width: 992px)
+				right: -2px
+			
+			@media (max-width: 576px)
+				left: 10px
+				right: auto
+				top: 18px
+	
+	&__number
+		font-weight: 700
+		font-size: 26px
+		color: $blue
+		width: 100%
+		display: block
+		margin: 0
+		font-family: 'Montserrat', sans-serif
+			
+		&_top
+			margin: 0
+			text-align: end
+
+			@media (max-width: 576px)
+				text-align: left
+				margin-bottom: 7px
+		
+		@media (max-width: 576px)
+			font-size: 22px
+			margin-left: 0
+			margin-bottom: 13px
+
+	&__txt
+		margin: 0
+		max-width: 360px
+		color: #646464
+		
+		@media (max-width: 400px)
+			font-size: 12px
+			line-height: 14.4px
+	
+	&__inner
+		height: auto
+		width: 43.6%
+		padding-left: 36px
+		box-sizing: border-box
+		margin-right: 7.1%
+		margin-top: 0
+		align-items: center
+		display: flex
+		flex-wrap: wrap
+		position: relative
+
+		@media (max-width: 576px)
+			padding-left: 0
+			width: 100%
+
+		&_top
+			height: auto
+			margin-top: 0
+			display: flex
+			justify-content: flex-end
+			align-items: center
+			flex-direction: row
+			text-align: end
+			padding-right: 36px
+			padding-left: 0
+			margin-left: 7.1%
+			margin-right: 0
+			align-items: center
+			flex-direction: row
+
+			@media (max-width: 576px)
+				text-align: left
+				padding-right: 0
+				justify-content: flex-start
+				margin-left: 0
+	
+	&__subtitle
+		margin-left: 0
+		margin-bottom: 22px
+		width: 100%
+		margin-top: 0
+
+		@media (max-width: 992px)
+			margin-bottom: 20px
+		
+		@media (max-width: 576px)
+			font-size: 17px
+			margin-bottom: 20.5px
+		
+		@media (max-width: 400px)
+			font-size: 14px
